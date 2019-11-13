@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ij34</groupId>
-	<artifactId>ek-server</artifactId>
+	<artifactId>ek-service-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<parent>
@@ -24,10 +24,18 @@
 	</dependencyManagement>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>	
+	
 <dependency>
     <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+    <artifactId>spring-cloud-netflix-eureka-server</artifactId>
 </dependency>
+
+
 
 	</dependencies>
 
