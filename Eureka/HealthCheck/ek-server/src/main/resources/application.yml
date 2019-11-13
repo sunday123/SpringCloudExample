@@ -1,0 +1,14 @@
+server:
+  port: 8761
+spring:
+   application:
+     named: health-check-server 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+logging:
+  level:
+    com.netflix: INFO
