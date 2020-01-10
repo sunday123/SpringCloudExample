@@ -1,0 +1,19 @@
+server:
+  port: 9000
+spring:
+  application:  
+    name: ribbon-invoker
+  cloud:
+    loadbalancer:
+      retry: false 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://slave1:8761/eureka/
+ribbon-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.ij34.cloud.MyRule
+    NFLoadBalancerPingClassName: com.ij34.cloud.MyPing
+    listOfServers: http://slave1:8080/,http://slave1:8081/
