@@ -15,7 +15,7 @@ spring:
       server:
         git:
           uri: https://github.com/sunday123/SpringCloudExample/
-          search-paths: Nacos/Config/Parameter/
+          search-paths: Nacos/Config-Bus/Parameter/
           username: lyx
           password: 132456
           default-label: master
@@ -24,7 +24,7 @@ spring:
 
             - patterns: application*
               uri: https://github.com/sunday123/SpringCloudExample
-              search-paths: Nacos/Config/Parameter/
+              search-paths: Nacos/Config-Bus/Parameter/
 
       label: master
       name: application
