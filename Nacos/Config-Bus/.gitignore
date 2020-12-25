@@ -1,4 +1,4 @@
-# Compiled class file
+/target/
 *.class
 *.classpath
 /target/
