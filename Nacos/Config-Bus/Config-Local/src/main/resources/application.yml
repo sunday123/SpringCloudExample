@@ -1,0 +1,5 @@
+#spring:
+#  profiles:
+#    active: dev
+config:
+  info: hello-2020
