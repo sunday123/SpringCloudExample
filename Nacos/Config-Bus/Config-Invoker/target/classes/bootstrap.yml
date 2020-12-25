@@ -18,11 +18,12 @@ spring:
       rocketmq:
         binder:
           name-server: 127.0.0.1:9876 # RocketMQ Namesrv
-      #          customized-trace-topic: bustopic
+          customized-trace-topic: bus-topic
+
     bus:
       refresh:
         enabled: true
-      destination: config-bus-i
+      destination: config-bus-consumer
 
 
 

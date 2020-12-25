@@ -17,28 +17,26 @@ spring:
           uri: https://github.com/sunday123/SpringCloudExample/
           search-paths: Nacos/Config-Bus/Parameter/
           username: lyx
-          password: 132456
+          password: 123456
           default-label: master
-          basedir: D:/gitworkplace/SpringCloudExample/Nacos/Config-Bus/pull-cache/
+          basedir: D:/gitworkplace/SpringCloudExample/Nacos/Config-Bus/pull-cache
           repos:
 
             - patterns: application*
               uri: https://github.com/sunday123/SpringCloudExample
               search-paths: Nacos/Config-Bus/Parameter/
-
+              basedir: D:/gitworkplace/SpringCloudExample/Nacos/Config-Bus/pull-cache #D:/gitworkplace/SpringCloudExample/Nacos/Config-Bus/pull-cache
       label: master
       name: application
     stream:
       rocketmq:
         binder:
           name-server: 127.0.0.1:9876 # RocketMQ Namesrv
-#          customized-trace-topic: bustopic
-
+          customized-trace-topic: bus-topic
     bus:
       refresh:
         enabled: true
-      destination: config-bus
-
+      destination: config-bus-producer
 
 
 server:
