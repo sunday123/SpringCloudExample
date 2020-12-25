@@ -9,7 +9,7 @@
 *.iml
 # Log file
 *.log
-/pull-cache/
+
 # BlueJ files
 *.ctxt
 
