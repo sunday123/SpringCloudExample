@@ -1,6 +1,8 @@
-*.class
-*.classpath
 /target/
+/classes/
+/generated-sources/
+/*.class
+*.classpath
 /.idea/
 /.git/
 /.settings/

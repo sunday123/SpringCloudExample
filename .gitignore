@@ -1,3 +1,6 @@
+/target/
+/classes/
+/generated-sources/
 /*.class
 *.classpath
 /.idea/
