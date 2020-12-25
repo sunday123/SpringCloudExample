@@ -12,10 +12,11 @@
 <!--    <module>NaCos-Server</module>-->
     <module>Config-Provider</module>
     <module>Config-Invoker</module>
+    <module>Config-Local</module>
   </modules>
   <name>Config</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://www.ij34.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
