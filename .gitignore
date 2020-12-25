@@ -1,5 +1,4 @@
-/target/
-*.class
+/*.class
 *.classpath
 /.idea/
 /.git/
