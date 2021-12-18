@@ -1,31 +1,29 @@
 package com.ij34.cloud;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@Configuration
 public class TitleInvokerController {
-
-	private final RestTemplate restTemplate;
-
 	@Autowired
-	public TitleInvokerController(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
+	LoadBalancerClient loadBalancerClient;
+    @Autowired
+	TitleOpenFeignClient titleOpenFeignClient;
+
+
+	    @GetMapping(value="/router/{num}")
+	 	public Object getRouter(@PathVariable("num") Integer num ){
+			 return  new RestTemplate().getForObject(loadBalancerClient.choose("nacos-provider").getUri() + "/title/" + num, Object.class);
+
+	 	}
+
+	@GetMapping(value="/router2/{num}")
+	public Object getRouter2(@PathVariable("num") Integer num ){
+		return  titleOpenFeignClient.getRouter2(num);
 	}
 
-
-	  
-	     @RequestMapping(value="/router",method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
-	 	public String getRouter(){
-	 		return restTemplate.getForObject("http://nacos-provider/title/666", String.class);
-	 	}  
-	  
 }

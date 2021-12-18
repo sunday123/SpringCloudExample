@@ -28,10 +28,10 @@ public Title(Integer id, String title, String content) {
 	this.title = title;
 	this.content = content;
 }
-   
+
 public Title() {
 	super();
 
 }
-   
+
 }
