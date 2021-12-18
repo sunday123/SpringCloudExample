@@ -1,0 +1,46 @@
+spring:
+  application:
+    # 服务名
+    name: config-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #Nacos地址
+        file-extension: yaml
+      config:
+        server-addr: 127.0.0.1:8848 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+        enabled: true
+    config:
+      server:
+        git:
+          uri: https://github.com/sunday123/SpringCloudExample/
+          search-paths:  nacos-parent/config/parameter/
+          username: lyx
+          password: password
+          default-label: master
+          basedir: D:\\projects\\gitworkplaces\\SpringCloudExample\\nacos-parent\\config\\pull-cache
+          repos:
+
+            - patterns: application*
+              uri: https://github.com/sunday123/SpringCloudExample
+              search-paths: nacos-parent/config/parameter/
+
+      label: master
+      name: application
+
+
+
+
+server:
+  # 服务端口
+  port: 8081
+
+
+
+management:
+  # 端点检查（健康检查）
+  endpoints:
+    web:
+      exposure:
+        include: "*"
