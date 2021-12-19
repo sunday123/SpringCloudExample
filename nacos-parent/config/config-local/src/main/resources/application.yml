@@ -1,5 +1,16 @@
-#spring:
-#  profiles:
-#    active: dev
-config:
-  info: hello-2020
+server:
+  port: 8081
+spring:
+  profiles:
+    active: native
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #Nacos地址
+        file-extension: yaml
+      config:
+        server:
+          native:
+            search-locations: classpath:/config/application**
+  application:
+    name: config-local

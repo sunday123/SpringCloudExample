@@ -1,1 +1,10 @@
-word: hello 吃屎啦
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 9000

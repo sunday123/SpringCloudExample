@@ -14,17 +14,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sunday123/SpringCloudExample/
-          search-paths:  nacos-parent/config/parameter/
-          username: lyx
-          password: password
+          uri: https://github.com/sunday123/SpringCloudExample.git
+          search-paths: /nacos-parent/config/parameter
+#          username: lyx
+#          password: password
           default-label: master
           basedir: D:\\projects\\gitworkplaces\\SpringCloudExample\\nacos-parent\\config\\pull-cache
           repos:
-
-            - patterns: application*
-              uri: https://github.com/sunday123/SpringCloudExample
-              search-paths: nacos-parent/config/parameter/
+            - patterns: application-*
+              uri: https://github.com/sunday123/SpringCloudExample.git
+              search-paths: /nacos-parent/config/parameter
 
       label: master
       name: application
@@ -32,9 +31,6 @@ spring:
 
 
 
-server:
-  # 服务端口
-  port: 8081
 
 
 
@@ -44,3 +40,5 @@ management:
     web:
       exposure:
         include: "*"
+server:
+  port: 8081

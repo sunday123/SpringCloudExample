@@ -1,30 +1,17 @@
-# service instance name
 spring:
   application:
-    # 服务名
     name: config-invoker
+  profiles:
+    active: test
   cloud:
     nacos:
-      discovery:
-        # 服务注册中心
+      config:
+        refresh-enabled: true
         server-addr: 127.0.0.1:8848
         file-extension: yaml
-    config:
-      name: application
-      discovery:
-        service-id: config-provider
-        enabled: true
-
-
-
-
-server:
-  # 服务端口
-  port: 9000
-
-management:
-  # 端点检查（健康检查）
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#      discovery:
+        ##        server-addr: 127.0.0.1:8848 #Nacos��ַ
+        ##        file-extension: yaml
+#        shared-configs:
+#          - data-id: config-invoker.yaml
+#            refresh: true

@@ -17,11 +17,10 @@ spring:
           uri: https://github.com/sunday123/SpringCloudExample/
           search-paths: nacos-parent/config-bus/parameter/
           username: lyx
-          password: 123456
+          password: password
           default-label: master
           basedir: D:\\projects\\gitworkplaces\\SpringCloudExample\\nacos-parent\\config-bus\\pull-cache
           repos:
-
             - patterns: application*
               uri: https://github.com/sunday123/SpringCloudExample
               search-paths: nacos-parent/config-bus/parameter/

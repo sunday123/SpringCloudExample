@@ -12,7 +12,7 @@ spring:
     sentinel:
       eager: true
       transport:
-        dashboard: 127.0.0.1:8080
+        dashboard: 127.0.0.1:8081
       # nacos配置持久化
 #      datasource:
 #        ds1:

@@ -1,10 +1,10 @@
 server:
-  port: 8082
+  port: 8083
 spring:
   profiles:
     active: native
   application:
-    name: Config-Local
+    name: config-local
   cloud:
     nacos:
       discovery:
