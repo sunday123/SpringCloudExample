@@ -1,0 +1,12 @@
+server:
+  # 服务端口
+  port: 8082
+
+
+
+management:
+  # 端点检查（健康检查）
+  endpoints:
+    web:
+      exposure:
+        include: "*"

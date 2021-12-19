@@ -12,7 +12,6 @@
 <!--    <module>NaCos-Server</module>-->
     <module>config-bus-provider</module>
     <module>config-bus-invoker</module>
-    <module>config-bus-local</module>
   </modules>
   <name>config-bus</name>
   <!-- FIXME change it to the project's website -->
